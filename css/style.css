@@ -74,7 +74,6 @@ p {
     font-weight: 900;
     font-size: 92px;
     line-height: 88px;
-    /* color: #000000; */
     color: rgba(0, 0, 0, 0.5);
     mix-blend-mode: soft-light;
     word-break: break-all;
@@ -156,12 +155,17 @@ input {
     height: 50px;
     padding: 18px 15px;
     margin: 6px 0 15px;
+    outline: none;
 }
 
 input::placeholder {
     font-weight: bold;
     font-size: 14px;
     color: #0D0D0D;
+}
+
+input:focus-visible {
+    border: 2px solid #F21313;
 }
 
 .popup__btn {
@@ -177,4 +181,11 @@ input::placeholder {
     line-height: 1.1;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: all .4s ease-in-out;
+
+}
+
+.popup__btn:hover {
+    color: #F3CE00;
+    background: linear-gradient(90deg, #F21313 20%, #FF5621 80%);
 }
